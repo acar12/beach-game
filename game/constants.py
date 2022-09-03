@@ -1,4 +1,4 @@
 import enum
 
-class Color(enum.Enum):
+class Color:
     BLACK = (0, 0, 0)

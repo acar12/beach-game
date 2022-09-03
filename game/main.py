@@ -9,4 +9,6 @@ def draw():
 
 running = True
 while running:
-    pygame.draw.rect(display, )
+    pygame.draw.rect(display, Color.BLACK, (0, 0, width, height))
+    draw()
+    pygame.display.update()
