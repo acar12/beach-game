@@ -1,7 +1,7 @@
 import pygame
 from constants import Color, Particle
 
-def draw(display, grid, cell_size):
+def draw_grid(display, grid, cell_size):
     for y, row in enumerate(grid):
         for x, cell in enumerate(row):
             color_mapping = {Particle.EMPTY: Color.BLACK, Particle.WALL: Color.GRAY, Particle.SAND: Color.BEIGE, Particle.WATER: Color.BLUE}
