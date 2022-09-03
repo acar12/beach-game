@@ -1,2 +1,2 @@
 # beach-game
-Clone of powder game, I used to play this as a kid.
+Clone of powder game, I used to play the game as a kid.
