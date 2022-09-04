@@ -1,5 +1,6 @@
 import pygame
 from physics import update_particle
+from helper import turn_coords_to_i
 from constants import Color, Particle
 
 pygame.font.init()
@@ -16,7 +17,7 @@ def draw_grid(display, grid, cell_size):
     set_ = set()
     for y, row in enumerate(grid):
         for x, cell in enumerate(row):
-            cell_val = y * len(grid[0]) + x
+            cell_val = turn_coords_to_i(grid, x, y)
             if cell_val not in set_:
                 new_cell_val = update_particle(grid, x, y)
                 if new_cell_val: set_.add(new_cell_val)
