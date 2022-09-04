@@ -1,2 +1,5 @@
 # beach-game
-Clone of powder game, I used to play the game as a kid.
+Clone of powder game. I used to play powder game as a kid.
+### features
+- sand and water physics
+- water displacement (sand sinks in water)
