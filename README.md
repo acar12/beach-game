@@ -5,7 +5,7 @@ Clone of powder game. I used to play powder game as a kid.
 
 
 ### features
-- sand and water physics
-- water displacement (sand sinks in water)
+- Sand and water physics
+- Water displacement (sand sinks in water)
 
 **Run using the virtual environment.**
