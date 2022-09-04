@@ -27,6 +27,7 @@ def update_particle(grid, x, y):
                 grid[y][x] = Particle.EMPTY
                 grid[y + 1][x - 1] = cell
                 return turn_coords_to_i(grid, x - 1, y + 1)
+
     if cell == Particle.WATER:
         left = x != 0 and grid[y][x - 1] == Particle.EMPTY
         right = x != len(grid[0]) - 1 and grid[y][x + 1] == Particle.EMPTY
@@ -44,3 +45,26 @@ def update_particle(grid, x, y):
             grid[y][x] = Particle.EMPTY
             grid[y][x - 1] = cell
             return turn_coords_to_i(grid, x - 1, y)
+
+    if cell == Particle.SAND and y != len(grid) - 1:
+        if grid[y + 1][x] == Particle.WATER:
+                grid[y][x] = Particle.WATER
+                grid[y + 1][x] = cell
+                return turn_coords_to_i(grid, x, y + 1)
+            
+        left = x != len(grid[0]) - 1 and grid[y + 1][x + 1] == Particle.WATER
+        right = x != 0 and grid[y + 1][x - 1] == Particle.WATER
+            
+        if left and right:
+            x_choice = choice((-1, 1))
+            grid[y][x] = Particle.WATER
+            grid[y + 1][x + x_choice] = cell
+            return turn_coords_to_i(grid, x + x_choice, y + 1)
+        elif left:
+            grid[y][x] = Particle.WATER
+            grid[y + 1][x + 1] = cell
+            return turn_coords_to_i(grid, x + 1, y + 1)
+        elif right:
+            grid[y][x] = Particle.WATER
+            grid[y + 1][x - 1] = cell
+            return turn_coords_to_i(grid, x - 1, y + 1)

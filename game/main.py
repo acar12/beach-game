@@ -3,7 +3,7 @@ from draw import draw_grid, draw_text
 from constants import Color, Particle
 
 width, height = 800, 800
-cell_size = 16
+cell_size = 10
 g_width, g_height = width // cell_size, height // cell_size
 grid = [[Particle.EMPTY for _ in range(g_width)] for _ in range(g_height)]
 
