@@ -3,7 +3,7 @@ from draw import draw_grid, draw_text
 from constants import Color, Particle
 
 width, height = 800, 800
-cell_size = 10
+cell_size = 16
 g_width, g_height = width // cell_size, height // cell_size
 grid = [[Particle.EMPTY for _ in range(g_width)] for _ in range(g_height)]
 
@@ -27,7 +27,8 @@ while running:
 
     if pygame.mouse.get_pressed()[0]:
         x, y = pygame.mouse.get_pos()
-        grid[y // cell_size][x // cell_size] = current_slot
+        if current_slot == Particle.EMPTY or grid[y // cell_size][x // cell_size] == Particle.EMPTY:
+            grid[y // cell_size][x // cell_size] = current_slot
 
     draw_grid(display, grid, cell_size)
     draw_text(display, 0, 0, "0 - REMOVE | 1 - WALL | 2 - SAND | 3 - WATER")
