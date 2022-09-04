@@ -1,5 +1,5 @@
 # beach-game
-Clone of powder game. I used to play powder game as a kid. The project is more like a cellular automata though.
+Clone of powder game. I used to play powder game as a kid. 
 
 ![Preview](preview.png)
 
