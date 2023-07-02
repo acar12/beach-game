@@ -1,5 +1,5 @@
 # beach-game
-Clone of powder game. I used to play powder game as a kid. 
+Clone of powder game.
 
 ![Preview](preview.png)
 
